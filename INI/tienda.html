@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Estyle.css">
+    <link rel="stylesheet" href="css/style.css">
+  
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="title">TIENDA</div>
+        <div class="listProduct">
+
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo">Onthego</a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="imagenes/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="http://localhost/INI/home.php">Volver atras</a></li>
+                    <li><a href="#">Cabello</a></li>
+                    <li><a href="#">Cuidado Facial</a></li>
+                    <li><a href="#">Uñas</a></li>
+                    <li><a href="http://localhost/INI/index.html">Cerrar Sesión</a></li>
+    
+                </ul>
+            </nav>
+            <div>
+                <ul>
+                    <li class="submenu">
+                        <img id="img-carrito" src="imagenes/car.svg" alt="car">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="Vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        
+    <script>
+    
+        let products = null;
+        // get datas from file json
+        fetch('products.json')
+            .then(response => response.json())
+            .then(data => {
+                products = data;
+                addDataToHTML();
+        })
+
+        function addDataToHTML(){
+    // remove datas default from HTML
+        let listProductHTML = document.querySelector('.listProduct');
+
+        // add new datas
+        if(products != null) // if has data
+        {
+            products.forEach(product => {
+                let newProduct = document.createElement('a');
+                newProduct.href = 'detail.html?id=' + product.id;
+                newProduct.classList.add('item');
+                newProduct.innerHTML = 
+                `<IMG src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>`;
+                listProductHTML.appendChild(newProduct);
+
+            });
+        }
+    }
+
+    </script>
+</body>
+</html>

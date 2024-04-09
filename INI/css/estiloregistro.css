@@ -1,0 +1,121 @@
+body {
+    box-sizing: border-box;
+    font-family: century gothic;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url(IMG/nuevos\ productos\ carrusel.png);
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    box-shadow: 0 0 20px rgba(252, 248, 248, 0.2);
+    padding: 50px 35px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 380px;
+    background-color:#381b1ba6;
+}
+
+form h2 {
+    font-size: 35px;
+    text-align: center;
+    display: flex;
+    color:rgb(172, 166, 166);
+    margin: 0;
+}
+
+form p {
+    font-size: 16px;
+    color: rgb(255, 253, 253);
+    margin-bottom: 35px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 305px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+input {
+    color: black;
+    padding: 20px 15px 20px 60px;
+    width: 100%;
+    border-radius: 25px;
+    border: 0;
+    box-shadow: 0 0 20px rgba(119, 122, 133, 0.7);
+    outline: none;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: rgba(199, 152, 95, 0.575);
+}
+.btn {
+    padding: 20px;
+    background: linear-gradient(
+    90deg,
+    rgb(122, 109, 107)25%
+    rgb(49, 47, 47)100%);
+    box-shadow: 0 0 20px rgba(252, 248, 248, 0.2);
+    color: rgba(197, 146, 84, 0.575);
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+.btn:hover {
+    background: #381b1ba6;
+}
+
+.success {
+    position: absolute;
+    top: 50px;
+    color: black;
+    font-size: 18px;
+}
+.error {
+    position: absolute;
+    top: 50px;
+    color: rgb(83, 75, 75);
+    font-size: 18px;
+}
+@media(max-width:991px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .input-wrapper {
+        position: relative;
+        width: 88%;
+        margin-bottom: 35px;
+
+    }
+
+    input {
+        padding: 20px 0px 20px 45px;
+
+    }
+
+}

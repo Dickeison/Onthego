@@ -1,0 +1,51 @@
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    background-color: #7d9cbd;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    /* Elimina el contorno predeterminado al hacer clic */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Agrega una sombra al obtener el enfoque */
+}
+
+/* Estilos para el párrafo y el enlace de registro */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección de recordar contraseña */
+.recordar {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.recordar a {
+    color: #007bff;
+}
+
+.recordar a:hover {
+    text-decoration: underline;
+}
